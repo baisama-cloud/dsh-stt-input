@@ -5,6 +5,18 @@
   "license": "MIT",
   "type": "module",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baisama-cloud/dsh-stt-input.git"
+  },
+  "bugs": {
+    "url": "https://github.com/baisama-cloud/dsh-stt-input/issues"
+  },
+  "homepage": "https://github.com/baisama-cloud/dsh-stt-input#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "exports": {
     ".": {
       "default": "./lib/index.js"
