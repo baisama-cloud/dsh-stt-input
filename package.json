@@ -1,0 +1,53 @@
+{
+  "name": "dsh-stt-input",
+  "version": "0.1.0",
+  "description": "Speech-to-text voice input for the DeepSeek Harness (DSH) web GUI: click the mic button in the composer to turn speech into text in the input box. Supports the browser's built-in Web Speech API (zero-config, Chrome/Edge) and OpenAI-compatible Whisper endpoints (OpenAI / Groq) with the STT model selectable in Settings → 语音输入. DSH 语音输入插件：点击输入框旁的麦克风按钮，把语音转成文字填入输入框；支持浏览器本地识别与 OpenAI 兼容 Whisper API，模型可在设置中选择。",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.18"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "stt",
+    "speech-to-text",
+    "voice-input",
+    "whisper",
+    "groq",
+    "openai",
+    "web-speech-api",
+    "web-ui"
+  ]
+}
