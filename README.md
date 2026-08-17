@@ -1,6 +1,6 @@
 **中文** · [English](README.en.md)
 
-# dsh-stt-input    
+# dsh-stt-input
 
 DeepSeek Harness (DSH) Web GUI 的语音输入插件。
 
